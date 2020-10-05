@@ -1,0 +1,57 @@
+{
+  "name": "test-ai",
+  "description": "Test a battleship AI against a map",
+  "version": "0.1.0",
+  "author": "Neil Sorensen @NeilSorensen",
+  "bin": {
+    "test-ai": "./bin/run"
+  },
+  "bugs": "https://github.com/NeilSorensen/battleship/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.0",
+    "simple-statistics": "^7.3.0",
+    "tslib": "^1.13.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@oclif/test": "^1.2.7",
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^10.17.35",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "eslint-config-oclif-typescript": "^0.1.0",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "homepage": "https://github.com/NeilSorensen/battleship",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "bin": "test-ai"
+  },
+  "repository": "NeilSorensen/battleship",
+  "scripts": {
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rimraf lib && tsc -b && oclif-dev readme",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}
