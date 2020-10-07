@@ -4,8 +4,6 @@ test-ai
 Test a battleship AI against a map
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/test-ai.svg)](https://npmjs.org/package/test-ai)
-[![Downloads/week](https://img.shields.io/npm/dw/test-ai.svg)](https://npmjs.org/package/test-ai)
 [![License](https://img.shields.io/npm/l/test-ai.svg)](https://github.com/NeilSorensen/battleship/blob/master/package.json)
 
 <!-- toc -->
