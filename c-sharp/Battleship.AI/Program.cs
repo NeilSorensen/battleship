@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using Battleship.AI.AITester;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace Battleship.AI
 {
@@ -11,7 +11,7 @@ namespace Battleship.AI
         static void Main(string[] args)
         {
             var testFile = File.ReadAllText(args[0]);
-            var maps = JsonConvert.DeserializeObject<List<string>>(testFile);
+            var maps = JsonSerializer.Deserialize<List<string>>(testFile);
             var simulator = new GameSimulator();
             simulator.SimulateAllGames(maps);
         }
